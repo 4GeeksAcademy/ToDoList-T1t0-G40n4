@@ -9,3 +9,61 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+.container {
+    margin-top: 50px
+    
+    
+}
+.title{
+    font-size: larger;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+ul{
+    padding: 0%;
+    
+}
+ul li{
+    list-style-type: none;
+    border: 1px solid gray;
+    padding: 5px;
+    margin-bottom: 0;
+}
+input{
+    width: 100%;
+    padding: 5px;
+
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    width: 100%;
+  }
+  
+  .remove-task-btn {
+    display: none; /* Ocultar el botón por defecto */
+    background: none;
+    border: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left: 10px;
+    font-size: 15px;
+    color: red;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  
+  }
+  
+  .task-item:hover .remove-task-btn {
+    display: inline-block; /* Mostrar el botón cuando el cursor pase sobre la tarea */
+    margin-right: 5px;
+  }
+  
+  .remove-task-btn:hover {
+   
+    color: red;
+    text-align: center;
+    
+  }
