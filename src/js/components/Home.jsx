@@ -21,7 +21,7 @@ const Home = () => {
 	  <>
 		<div className="container">
 		  <span className="title">Tasks to do</span>
-		  <ul>
+		  <ul className="mt-2">
 			<li>
 			  <input
 				type="text"
@@ -43,7 +43,7 @@ const Home = () => {
 			  </li>
 			))}
 		  </ul>
-		  <div>
+		  <div className="text-end alert alert-primary">
 			{tasksList.length} {tasksList.length === 1 ? "task" : "tasksList"} left
 		  </div>
 		</div>
