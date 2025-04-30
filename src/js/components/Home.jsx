@@ -1,21 +1,20 @@
 import React, {useState} from "react";
 
 const Home = () => {
-	const [inputValue, setInputValue] = useState(""); // Estado para el valor del input
-	const [tasks, setTasks] = useState([]); // Estado para la lista de tareas
+	const [inputValue, setInputValue] = useState(""); 
+	const [tasksList, setTasksList] = useState([]); 
   
-	// Maneja la tecla "Enter" para agregar una nueva tarea
+	
 	const handleKeyUp = (e) => {
 	  if (e.key === "Enter" && inputValue.trim() !== "") {
-		setTasks([...tasks, inputValue.trim()]);
-		setInputValue(""); // Limpia el input después de agregar la tarea
+		setTasksList([...tasksList, inputValue.trim()]);
+		setInputValue(""); 
 	  }
 	};
   
-	// Elimina una tarea según su índice
 	const removeTask = (indexToRemove) => {
-	  const updatedTasks = tasks.filter((_, index) => index !== indexToRemove);
-	  setTasks(updatedTasks);
+	  const updatedTasks = tasksList.filter((_, index) => index !== indexToRemove);
+	  setTasksList(updatedTasks);
 	};
   
 	return (
@@ -26,13 +25,13 @@ const Home = () => {
 			<li>
 			  <input
 				type="text"
-				onChange={(e) => setInputValue(e.target.value)}
+				onChange={(e) => setInputValue(e.target.value)} 
 				value={inputValue}
 				onKeyUp={handleKeyUp}
 				placeholder="Add a new task"
 			  />
 			</li>
-			{tasks.map((task, index) => (
+			{tasksList.map((task, index) => (
 			  <li key={index} className="task-item">
 				{task}{" "}
 				<button 
@@ -45,7 +44,7 @@ const Home = () => {
 			))}
 		  </ul>
 		  <div>
-			{tasks.length} {tasks.length === 1 ? "task" : "tasks"} left
+			{tasksList.length} {tasksList.length === 1 ? "task" : "tasksList"} left
 		  </div>
 		</div>
 	  </>
